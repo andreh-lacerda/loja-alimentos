@@ -10,13 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Observable<Product[]>;
+  products$: Observable<Product[]>;
   displayedColumns = ['name', 'quantity', 'price'];
 
 
   constructor(private productsService: ProductsService) {
     //this.productsService = new ProductsService();
-    this.products = this.productsService.list();
+    this.products$ = this.productsService.list();
 
   }
 
