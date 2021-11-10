@@ -8,7 +8,9 @@
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Produto </th>
-        <td mat-cell *matCellDef="let product"> {{ product.name }} </td>
+        <td mat-cell *matCellDef="let product"> {{ product.name }}
+          <mat-icon aria-hidden="false" aria-label="Produto">{{ product.name | category }}</mat-icon>
+        </td>
       </ng-container>
 
       <!-- Quantity Column -->
